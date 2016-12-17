@@ -13,4 +13,4 @@ Find the variable named API_KEY in the file and paste your key:-
 PopularMovies\app\src\main\java\ay3524\com\popularmovies\Utils\Constants.java
 
 # Screenshots
-![Phone First Screen](https://raw.github.com/cloud143/PopularMovies/master/device-2016-12-17-230739.png)
+![Phone First Screen](https://raw.github.com/cloud143/PopularMovies/master/device-2016-12-17-230738.png)
