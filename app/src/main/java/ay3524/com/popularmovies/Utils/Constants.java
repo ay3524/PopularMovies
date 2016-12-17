@@ -20,7 +20,7 @@ public class Constants {
     //private static final String TAG_POPULAR = "popular?";
     //private static final String TAG_TOP_RATED = "top_rated?";
     //public static final String TAG_VIDEOS = "/videos?";
-    public static final String API_KEY = "";
+    public static final String API_KEY = "c1283ff5cab3dfe3fd27e8a041795e4b";
     //public static final String FINAL_POPULAR_URI = BASE_URI+TAG_POPULAR+API_KEY;
     //public static final String FINAL_TOP_RATED_URI = BASE_URI+TAG_TOP_RATED+API_KEY;
 

@@ -1,6 +1,9 @@
 package ay3524.com.popularmovies.adapter;
 
 import android.content.Context;
+import android.graphics.Bitmap;
+import android.graphics.drawable.BitmapDrawable;
+import android.support.v7.graphics.Palette;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -46,8 +49,16 @@ public class RecyclerAdapterFav extends RecyclerView.Adapter<RecyclerAdapterFav.
         holder.title.setText(itemsModels.get(position).getName());
         holder.genre.setText(itemsModels.get(position).getGenre());
 
-        int vibrant = BitmapUtility.getPaletteColor(holder.image);
-        holder.linearLayout.setBackgroundColor(vibrant);
+        //int vibrant = BitmapUtility.getPaletteColor(holder.image);
+        //holder.linearLayout.setBackgroundColor(vibrant);
+
+        BitmapDrawable drawable = (BitmapDrawable) holder.image.getDrawable();
+        Bitmap bitmap = drawable.getBitmap();
+
+        Palette palette = Palette.generate(bitmap);
+        int defaultColor = 0xFF333333;
+        int color = palette.getDarkMutedColor(defaultColor);
+        holder.linearLayout.setBackgroundColor(color);
 
     }
 
