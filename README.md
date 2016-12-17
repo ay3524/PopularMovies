@@ -14,3 +14,5 @@ PopularMovies\app\src\main\java\ay3524\com\popularmovies\Utils\Constants.java
 
 # Screenshots
 ![Phone First Screen](https://raw.github.com/cloud143/PopularMovies/master/device-2016-12-17-230738.png)
+![Phone Second Screen](https://raw.github.com/cloud143/PopularMovies/master/device-2016-12-17-230854.png)
+![Tablet Screen](https://raw.github.com/cloud143/PopularMovies/master/device-2016-12-17-233056.png)
