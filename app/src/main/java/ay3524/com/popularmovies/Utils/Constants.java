@@ -10,33 +10,25 @@ import android.net.NetworkInfo;
 
 public class Constants {
 
-    //static final String LOG_TAG = "HELLO";
     public static final int MOVIES_LOADER_ID_ONE = 1;
-    //public static final int MOVIES_LOADER_ID_ZERO = 0;
+
     public static final int GRID_TWO = 2;
     public static final int GRID_TRHEE = 3;
 
     public static final String BASE_URI = "http://api.themoviedb.org/3/";
-    //private static final String TAG_POPULAR = "popular?";
-    //private static final String TAG_TOP_RATED = "top_rated?";
-    //public static final String TAG_VIDEOS = "/videos?";
+
     public static final String API_KEY = "";
-    //public static final String FINAL_POPULAR_URI = BASE_URI+TAG_POPULAR+API_KEY;
-    //public static final String FINAL_TOP_RATED_URI = BASE_URI+TAG_TOP_RATED+API_KEY;
 
     private static final String POSTER_URI = "http://image.tmdb.org/t/p/";
     private static final String POSTER_SIZE_W185 = "w185/";
     private static final String POSTER_SIZE_W342 = "w500/";
-    public static final String FINAL_POSTER_URI = POSTER_URI+POSTER_SIZE_W185;
-    public static final String FINAL_VIDEO_POSTER_URI = POSTER_URI+POSTER_SIZE_W342;
+    public static final String FINAL_POSTER_URI = POSTER_URI + POSTER_SIZE_W185;
+    public static final String FINAL_VIDEO_POSTER_URI = POSTER_URI + POSTER_SIZE_W342;
 
     public static final String BASE_YOUTUBE_URI = "https://www.youtube.com/watch?v=";
 
-   // public static final String IMDB_TITLE_BASE_URI ="www.imdb.com/title/";
-
     public final static String ARG_POSITION = "position";
 
-    //public final static String JSON_ARRAY_RESULT = "results";
     public final static String JSON_OBJECT_POSTER_PATH = "poster_path";
     public final static String JSON_OBJECT_OVERVIEW = "overview";
     public final static String JSON_OBJECT_RELEASE_DATE = "release_date";
@@ -86,23 +78,25 @@ public class Constants {
     public final static String WAR_STRING = "War";
     public final static String WESTERN_STRING = "Western";
 
-    public static boolean isConnected(Context context){
+    public static boolean isConnected(Context context) {
         ConnectivityManager connMgr = (ConnectivityManager)
                 context.getSystemService(Context.CONNECTIVITY_SERVICE);
         NetworkInfo networkInfo = connMgr.getActiveNetworkInfo();
         return networkInfo != null && networkInfo.isConnected();
     }
-    public static String convertDate(String date){
+
+    public static String convertDate(String date) {
         String[] splitDate = date.split("-");
         String year = splitDate[0];
         String month = splitDate[1];
         String day = splitDate[2];
         int mm = Integer.parseInt(month);
         String monthString = getMonth(mm);
-        return day+" "+monthString+", "+year;
+        return day + " " + monthString + ", " + year;
     }
-    private static String getMonth(int month){
-        switch (month){
+
+    private static String getMonth(int month) {
+        switch (month) {
             case 1:
                 return "Jan";
             case 2:
