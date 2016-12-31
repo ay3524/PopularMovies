@@ -190,7 +190,7 @@ public class MoviesTopRatedListFragment extends Fragment implements RecyclerAdap
     void showTopRatedList() {
         swipeRefreshLayout.setRefreshing(true);
         ApiInterface apiService =
-                ApiClient.getClient().create(ApiInterface.class);
+                ApiClient.getClient(getActivity()).create(ApiInterface.class);
 
         Call<MovieResponse> call = apiService.getTopRatedMovies(API_KEY);
         call.enqueue(new Callback<MovieResponse>() {

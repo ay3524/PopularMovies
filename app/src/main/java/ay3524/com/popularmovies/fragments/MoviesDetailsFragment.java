@@ -156,7 +156,7 @@ public class MoviesDetailsFragment extends Fragment implements View.OnClickListe
 
     private void getCast() {
         ApiInterface apiService =
-                ApiClient.getClient().create(ApiInterface.class);
+                ApiClient.getClient(getActivity()).create(ApiInterface.class);
         Call<MovieResponseCasts> call = apiService.getMovieCast(Integer.parseInt(currentMovieId), API_KEY);
         call.enqueue(new Callback<MovieResponseCasts>() {
             @Override
@@ -178,7 +178,7 @@ public class MoviesDetailsFragment extends Fragment implements View.OnClickListe
 
     private void getYoutubeUrl() {
         ApiInterface apiService =
-                ApiClient.getClient().create(ApiInterface.class);
+                ApiClient.getClient(getActivity()).create(ApiInterface.class);
         Call<MovieResponseVideos> call = apiService.getMovieTrailers(Integer.parseInt(currentMovieId), API_KEY);
         call.enqueue(new Callback<MovieResponseVideos>() {
             @Override
@@ -204,7 +204,7 @@ public class MoviesDetailsFragment extends Fragment implements View.OnClickListe
 
     private void getReviews() {
         ApiInterface apiService =
-                ApiClient.getClient().create(ApiInterface.class);
+                ApiClient.getClient(getActivity()).create(ApiInterface.class);
         Call<MovieResponseReviews> call = apiService.getMovieReviews(Integer.parseInt(currentMovieId), API_KEY);
         call.enqueue(new Callback<MovieResponseReviews>() {
             @Override

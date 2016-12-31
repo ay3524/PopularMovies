@@ -149,7 +149,7 @@ public class MoviesPopularListFragment extends Fragment implements RecyclerAdapt
 
     void showTopRatedList() {
         ApiInterface apiService =
-                ApiClient.getClient().create(ApiInterface.class);
+                ApiClient.getClient(getActivity()).create(ApiInterface.class);
 
         Call<MovieResponse> call = apiService.getTopRatedMovies(API_KEY);
         call.enqueue(new Callback<MovieResponse>() {
@@ -174,7 +174,7 @@ public class MoviesPopularListFragment extends Fragment implements RecyclerAdapt
 
     void showPopularList() {
         ApiInterface apiService =
-                ApiClient.getClient().create(ApiInterface.class);
+                ApiClient.getClient(getActivity()).create(ApiInterface.class);
 
         Call<MovieResponse> call = apiService.getPopularMovies(API_KEY);
         call.enqueue(new Callback<MovieResponse>() {
