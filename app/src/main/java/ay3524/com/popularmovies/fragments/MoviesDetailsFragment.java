@@ -117,7 +117,9 @@ public class MoviesDetailsFragment extends Fragment implements View.OnClickListe
 
         boolean tabletSize = getResources().getBoolean(R.bool.isTablet);
         if (!tabletSize) {
-            imageViewBack.setOnClickListener(this);
+            if (imageViewBack != null) {
+                imageViewBack.setOnClickListener(this);
+            }
         }
         database = dbHelper.getWritableDatabase();
 
