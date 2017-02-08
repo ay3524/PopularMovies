@@ -10,6 +10,7 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.Fragment;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.text.util.Linkify;
@@ -124,7 +125,7 @@ public class MoviesDetailsFragment extends Fragment implements View.OnClickListe
         database = dbHelper.getWritableDatabase();
 
         if (matchWithDataBase()) {
-            fab.setImageDrawable(getResources().getDrawable(R.drawable.ic_action_star_10));
+            fab.setImageDrawable(ContextCompat.getDrawable(getActivity(),R.drawable.ic_action_star_10));
         }
         return v;
     }
@@ -409,10 +410,10 @@ public class MoviesDetailsFragment extends Fragment implements View.OnClickListe
                     //Toast.makeText(getActivity(), "Already Added as favorite", Toast.LENGTH_SHORT).show();
                     if (deleteTitle(currentMovieTitle)) {
                         Toast.makeText(getActivity(), "Removed from favorites", Toast.LENGTH_SHORT).show();
-                        fab.setImageDrawable(getResources().getDrawable(R.drawable.ic_action_star_0));
+                        fab.setImageDrawable(ContextCompat.getDrawable(getActivity(),R.drawable.ic_action_star_0));
                     } else {
                         Toast.makeText(getActivity(), "Unable to remove from favorites", Toast.LENGTH_SHORT).show();
-                        fab.setImageDrawable(getResources().getDrawable(R.drawable.ic_action_star_10));
+                        fab.setImageDrawable(ContextCompat.getDrawable(getActivity(),R.drawable.ic_action_star_10));
                     }
                 } else {
                     imageView.invalidate();
@@ -427,10 +428,10 @@ public class MoviesDetailsFragment extends Fragment implements View.OnClickListe
 
                         long id = insertMovieInDatabase();
                         if (id == -1) {
-                            fab.setImageDrawable(getResources().getDrawable(R.drawable.ic_action_star_0));
+                            fab.setImageDrawable(ContextCompat.getDrawable(getActivity(),R.drawable.ic_action_star_0));
                             Toast.makeText(getActivity(), "Unable to save.Press once again", Toast.LENGTH_SHORT).show();
                         } else {
-                            fab.setImageDrawable(getResources().getDrawable(R.drawable.ic_action_star_10));
+                            fab.setImageDrawable(ContextCompat.getDrawable(getActivity(),R.drawable.ic_action_star_10));
                             Toast.makeText(getActivity(), "Movie added as favorite", Toast.LENGTH_SHORT).show();
                         }
 

@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.content.res.Configuration;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.v4.content.ContextCompat;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.GridLayoutManager;
@@ -78,9 +79,9 @@ public class MoviesPopularListFragment extends Fragment implements RecyclerAdapt
 
         emptyView.setVisibility(View.GONE);
 
-        swipeRefreshLayout.setColorSchemeColors(getResources().getColor(R.color.material_orangeA700),
-                getResources().getColor(R.color.material_greenA700),
-                getResources().getColor(R.color.material_amberA400));
+        swipeRefreshLayout.setColorSchemeColors(ContextCompat.getColor(getActivity(),R.color.material_orangeA700),
+                ContextCompat.getColor(getActivity(),R.color.material_greenA700),
+                ContextCompat.getColor(getActivity(),R.color.material_amberA400));
 
         recyclerView.setHasFixedSize(true);
         if (getActivity().getResources().getConfiguration().orientation == Configuration.ORIENTATION_PORTRAIT) {
