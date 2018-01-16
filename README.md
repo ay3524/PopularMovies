@@ -13,6 +13,6 @@ Find the variable named API_KEY in the file and paste your key:-
 PopularMovies\app\src\main\java\ay3524\com\popularmovies\Utils\Constants.java
 
 # Screenshots
-![Phone First Screen](https://wordpress-images.mindorks.com/09792-1etz8borfvbwoolchgczq1a.png)
+![Phone First Screen](https://raw.github.com/cloud143/PopularMovies/master/device-2016-12-17-230738.png)
 ![Phone Second Screen](https://raw.github.com/cloud143/PopularMovies/master/device-2016-12-17-230855.png)
 ![Tablet Screen](https://raw.github.com/cloud143/PopularMovies/master/device-2016-12-17-233057.png)
