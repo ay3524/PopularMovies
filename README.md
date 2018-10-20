@@ -1,5 +1,5 @@
 # About Popular Movies
-It is a fully functional and colorful android app which I made from scratch for Android Developer Nanodegree program. This app reveals the power of adaptive UI both for phone and tablet devices.
+It is a fully functional and colorful android app. This app reveals the power of adaptive UI both for phone and tablet devices.
 With the app, you can:
 
 1)Discover the most popular, the most rated or the highest rated movies
